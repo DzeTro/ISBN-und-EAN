@@ -27,10 +27,10 @@ namespace ISBN
             }
         }
 
-        private static void ISBNPrüfung(string input)
+        private static void ISBNPrüfung(string number)
         {
             //Eingabe nach int[] parsen
-            int[] numbers = input.ToCharArray() // wird das String in ein Array mit Chars umgewandelt
+            int[] numbers = number.ToCharArray() // wird das String in ein Array mit Chars umgewandelt
                 .Select(ch => ch == 'X' ? 10 : int.Parse(ch.ToString())).ToArray();
 
             int sum = 0;
